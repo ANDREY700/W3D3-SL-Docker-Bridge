@@ -1,8 +1,8 @@
 # app/Dockerfile
 
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-WORKDIR /home/andrey/Documents/Working/W3D3app
+WORKDIR /home/andrey/Documents/Working/w3d3app
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/ANDREY700/W3D2-SL-Home .
+RUN git clone https://github.com/ANDREY700/W3D3-SL-Docker-Bridge .
 
 RUN pip3 install -r requirements.txt
 
